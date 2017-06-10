@@ -17,7 +17,7 @@ I have a problem like that, everytime i want to require a folder's all javascrip
 And, now, i don't need it.
 
 ```javascript
-    var indexer = require('node-indexer');
+	var indexer = require('node-indexer');
 	module.exports = indexer(__dirname);
 ```
 
