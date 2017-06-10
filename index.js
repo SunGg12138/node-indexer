@@ -3,7 +3,7 @@
 )})
 
 (function(fs){
-
+    
     var indexer = function(dir, config){
 
         config = config || {};
@@ -15,6 +15,7 @@
         return indexer.normal(dir, config);
     };
 
+    // 默认使用的模式
     indexer.normal = function(dir, config){
 
         config.unless = config.unless || [];
@@ -29,7 +30,11 @@
 
         var del_suffix_reg = /\..+$/;
 
-        fs.readdirSync(dir)
+        var files;
+
+        typeof dir === 'string'? (files = fs.readdirSync(dir)) : (files = dir.files, dir = dir.dir);
+
+        files
 
         // 过滤系统文件和index文件
         .filter(item => config.unless.indexOf(item) < 0)
@@ -42,6 +47,7 @@
         return result;
     };
 
+    // 只读取某些文件
     indexer.only = function(dir, config){
 
         var result = {};
@@ -58,6 +64,40 @@
         });
 
         return result;
+    };
+
+    // 排除文件夹
+    indexer.file = function(dir, config){
+
+        var result = {};
+
+        result.files = 
+
+        fs.readdirSync(dir)
+        .filter(item => {
+            return fs.lstatSync(dir + '/' + item).isFile();
+        });
+
+        result.dir = dir;
+
+        return indexer(result, config);
+    };
+
+    // 排除文件
+    indexer.folder = function(dir, config){
+
+        var result = {};
+
+        result.files = 
+
+        fs.readdirSync(dir)
+        .filter(item => {
+            return fs.lstatSync(dir + '/' + item).isDirectory();
+        });
+
+        result.dir = dir;
+
+        return indexer(result, config);
     };
 
     module.exports = indexer;

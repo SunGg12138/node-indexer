@@ -53,6 +53,20 @@ Only use some files !
 	// Equal to: module.exports = { a, d }
 ```
 
+Only use file type !
+
+```javascript
+	var indexer = require('node-indexer');
+	module.exports = indexer.file(__dirname);
+```
+
+Only use folder type !
+
+```javascript
+	var indexer = require('node-indexer');
+	module.exports = indexer.folder(__dirname);
+```
+
 ## Examples
 
 Enter ’examples‘ folder and run
