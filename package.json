@@ -1,0 +1,88 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "node-indexer",
+        "scope": null,
+        "escapedName": "node-indexer",
+        "name": "node-indexer",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/grand/repositories"
+    ]
+  ],
+  "_from": "node-indexer@latest",
+  "_id": "node-indexer@1.0.0",
+  "_inCache": true,
+  "_location": "/node-indexer",
+  "_nodeVersion": "6.10.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/node-indexer-1.0.0.tgz_1497057798276_0.0073512031231075525"
+  },
+  "_npmUser": {
+    "name": "sungg12138",
+    "email": "961154209@qq.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "node-indexer",
+    "scope": null,
+    "escapedName": "node-indexer",
+    "name": "node-indexer",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-indexer/-/node-indexer-1.0.0.tgz",
+  "_shasum": "50ebde6c95389d3b24dd733ce0d4430925bf931c",
+  "_shrinkwrap": null,
+  "_spec": "node-indexer",
+  "_where": "/Users/grand/repositories",
+  "author": {
+    "name": "sungg12138"
+  },
+  "bugs": {
+    "url": "https://github.com/SunGg12138/node-indexer/issues"
+  },
+  "dependencies": {},
+  "description": "To solve the indexing problem of the index.js file in the node folder",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "50ebde6c95389d3b24dd733ce0d4430925bf931c",
+    "tarball": "https://registry.npmjs.org/node-indexer/-/node-indexer-1.0.0.tgz"
+  },
+  "homepage": "https://github.com/SunGg12138/node-indexer#readme",
+  "keywords": [
+    "node",
+    "index",
+    "index.js"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "sungg12138",
+      "email": "961154209@qq.com"
+    }
+  ],
+  "name": "node-indexer",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunGg12138/node-indexer.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
