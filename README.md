@@ -3,7 +3,7 @@
 I have a problem like that, everytime i want to require a folder's all javascript files and must write like this at index.js.
 
 ```javascript
-    var a = require('./a');
+    	var a = require('./a');
 	var b = require('./b');
 	var c = require('./c');
 	var d = require('./d');
