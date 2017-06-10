@@ -3,7 +3,7 @@
 I have a problem like that, everytime i want to require a folder's all javascript files and must write like this at index.js.
 
 ```javascript
-    	var a = require('./a');
+    var a = require('./a');
 	var b = require('./b');
 	var c = require('./c');
 	var d = require('./d');
@@ -19,10 +19,44 @@ And, now, i don't need it.
 ```javascript
 	var indexer = require('node-indexer');
 	module.exports = indexer(__dirname);
+
+	// Equal to: module.exports = { a, b, c, d, e, f, g }
 ```
 
 ## use npm
 
 ```javascript
     npm install node-indexer
+```
+
+## Other
+
+Don't use some files ！
+
+```javascript
+	var indexer = require('node-indexer');
+	module.exports = indexer(__dirname, {
+		unless: [ 'a.js', 'd.js' ]
+	});
+
+	// Equal to: module.exports = { c, d, e, f, g }
+```
+
+Only use some files !
+
+```javascript
+	var indexer = require('node-indexer');
+	module.exports = indexer(__dirname, {
+		only: [ 'a.js', 'd.js' ]
+	});
+
+	// Equal to: module.exports = { a, d }
+```
+
+## Examples
+
+Enter ’examples‘ folder and run
+
+```javascript
+	node result.js
 ```
